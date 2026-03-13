@@ -1,0 +1,230 @@
+
+body {
+ margin: 0;
+ font-family: 'Roboto', sans-serif;
+ font-size: 18px;
+ background-color: #e9e9e9
+}
+
+
+nav {
+ background-color: #161616;
+ overflow: hidden;
+ position: relative
+}
+
+nav ul {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+ background-color: #161616;
+ display: flex;
+ justify-content: flex-start
+}
+
+nav ul li a {
+ display: block;
+ color: #FFFFFF;
+ padding: 14px 16px;
+ text-decoration: none;
+ transition: 0.3s
+}
+
+nav ul li a:hover {
+ background-color: #333
+}
+
+#myTopnav > ul:nth-child(1) > li:nth-child(1) > a:nth-child(1):hover{
+ background-color: #00000000
+}
+
+
+nav .icon {
+ display: none;
+ color: #FFFFFF;
+ text-decoration: none
+}
+
+
+
+
+.logo{
+ height: 56px
+}
+
+
+
+
+.hero-home {
+ justify-content: flex-start;
+ align-items: center;
+ display: flex;
+ position: relative;
+ background-color: #8370f0;
+ min-height: 40vh;
+ padding: 5%;
+ background-image: url("./hisu-lee-V4Pn7QeYdPQ-unsplash.jpg");
+ background-size: cover;
+ background-repeat: no-repeat
+}
+
+.div-block {
+ width: 60%;
+ padding-left: 3%;
+ background-color: #cecae5;
+ padding-bottom: 3%;
+ padding-right: 3%
+}
+
+.div-block-5{
+ padding-left: 4%;
+ max-width: 90%;
+ padding-bottom: 1%;
+ border-bottom: 1px solid #ccc
+}
+
+.section-heading {
+ padding: 2%;
+ border-bottom: 1px solid #ccc
+}
+
+div.div-block-5:nth-child(1){
+ border-bottom: none;
+ padding-bottom: 0
+}
+
+.div-block h1 {
+ font-family: 'Roboto', sans-serif;
+ color: #000000;
+ font-size: 2.5rem;
+ margin-bottom: 20px
+}
+
+
+button, .button1, .button2 {
+ border: none;
+ color: rgb(255, 255, 255);
+ padding: 12px 24px;
+ text-align: center;
+ display: inline-block;
+ font-size: 16px;
+ margin: 4px 2px;
+ cursor: pointer;
+ border-radius: 20px;
+ background-color: #000;
+ transition: 0.3s
+}
+
+button:hover {
+ transform: translateY(-2px);
+ box-shadow: 0 4px 8px rgba(0,0,0,0.2)
+}
+
+#myBtn {
+ display: none;
+ position: fixed;
+ bottom: 20px;
+ right: 20px;
+ z-index: 1000
+}
+
+
+.div-niewiem {
+ padding: 40px 5%;
+ border-bottom: 1px solid #ccc
+}
+
+.div-niewiem strong:first-child {
+ font-size: 2rem;
+ color: #8370f0;
+ display: block;
+ margin-bottom: 20px
+}
+
+.heroprzystanki {
+ display: flex;
+ flex-direction: row;
+ gap: 30px
+}
+
+.div-lewoprzystanki, .div-prawoprzystanki {
+ flex: 1
+}
+
+
+.timetable-route-streets {
+ display: flex;
+ flex-direction: column;
+ margin-top: 15px
+}
+
+.timetable-route-stop {
+ display: flex;
+ align-items: center
+}
+
+.timetable-route-point.time {
+ width: 55px;
+ font-weight: 700;
+ font-size: 13px;
+ color: #666;
+ text-align:right;
+ margin-right: 10px
+}
+
+.timetable-route-point svg {
+ width: 40px;
+ flex-shrink: 0
+}
+
+.timetable-route-point.name {
+ padding-left: 10px;
+ font-size: 15px;
+ line-height: 1.2
+}
+
+.point circle { visibility: visible !important; fill: #8370f0; stroke: #8370f0 }
+.start rect { visibility: visible !important; fill: #8370f0; stroke: #8370f0 }
+.active .p0, .active .p4 { visibility: visible !important; stroke: #8370f0 !important; stroke-width: 4px }
+.p0-a .p0 { visibility: visible !important; stroke: #8370f0 }
+.p4-a .p4 { visibility: visible !important; stroke: #8370f0 }
+
+
+.autocomplete {
+ position: relative;
+ display: inline-block;
+ width: 100%;
+ max-width: 400px
+}
+
+input[type=text] {
+ background-color: #f1f1f1;
+ width: 100%;
+ padding: 12px;
+ border: 1px solid #ddd;
+ border-radius: 8px
+}
+
+.autocomplete-items {
+ position: absolute;
+ border: 1px solid #d4d4d4;
+ z-index: 1100;
+ top: 100%;
+ left: 0;
+ right: 0;
+ background: #FFFFFF
+}
+
+
+
+
+.row { display: flex; flex-wrap: wrap; padding: 0 4px }
+.column { flex: 50%; padding: 0 4px }
+
+
+
+#myTopnav > ul:nth-child(1) > li:nth-child(1) > a:nth-child(1){
+ padding-bottom: 0;
+ padding-top: 0;
+ padding-right: 0
+}

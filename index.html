@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subregionalny System Transportu</title>
+    <link rel="stylesheet" href="style.css">
+          <link rel="icon" type="image/x-icon" href="./Frame 361.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">    
+<style>
+body {
+    font-family: 'Roboto';font-size: 22px;
+}
+</style>
+<body>
+<nav id="myTopnav" class="topnav">
+    <ul>
+        <li><a><img src="Frame 361.png" class="logo"></a></li>
+        <li><a href="./index.html">Strona główna</a></li>
+        <li><a href="./ekspresowki.html">Rozkład jazdy</a></li>
+        <li><a href="./faq.html">FAQ</a></li>
+        <li><a href="./kontakt.html">Kontakt</a></li>
+    </ul>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+    </a>
+</nav>
+
+    <main>
+        <section class="hero-home">
+            <div class="div-block">
+                
+                <h1>700 000 pasażerów. <br>
+                    8 operatorów.<br>Czas na JEDEN SYSTEM.
+                </h1>
+
+                <p>Subregion Zachodni to potęga demograficzna, która stoi w korku przez brak współpracy między miastami. Nasza koncepcja to koniec ery "osobnych wysp" Rybnika, Jastrzębia i Wodzisławia.</p>
+           
+            <a href="https://www.petycjeonline.com/jeden_bilet_spojna_sie_chcemy_nowoczesnego_transportu_w_subregionie_zachodnim"><button class="button1">Podpisz Petycję</button></a>
+                        <a href="./Koncepcja poprawy transportu publicznego w Subregionie Zachodnim Województwa Śląskiego.pdf"><button class="button1">Sprawdź nasz dokument </button></a>
+
+
+            </div>
+        </div>
+        </section>
+
+    <div class="background-split">
+    	&nbsp;
+    </div>
+    <div class="page-container position-relative">
+    	<div id="nasze-propozycje-header" class="section-header">
+    		<h2 class="section-heading">
+    			Nasze propozycje
+    		</h2>
+    	</div>
+    </div>
+    <div class="div-block-4">
+    	<div class="div-block-21">
+		    <div class="div-block-5">
+    			<h3 class="heading-style-h3 spacer-top-2">
+    				<a href='./ekspresowki.html'>EKSPRESOWE POŁĄCZENIA</a>
+    			</h3>
+    			<p class="spacer-top-1">
+    				Siatka autobusów ekspresowych. Koniec z tłuczeniem się autobusem przez każdą wioskę. Łączymy Pszczynę, Jastrzębie, Rybnik i Racibórz szybkim taktem co 20-30 minut.
+    			</p>
+    		</div>
+            
+            <div class="div-block-5">
+                <h3 class="heading-style-h3 spacer-top-2">
+    				Sprawdź linie ekspresowe najbliżej ciebie!
+    			</h3>
+            <form autocomplete="off" action="/action_page.php">
+              <div class="autocomplete" style="width:300px;">
+                <input id="myInput" type="text" name="myCountry" placeholder="Miasto/Gmina">
+              </div>
+          
+            </form>
+            <div id="result-container" class="result-area"></div>
+
+        </div>
+
+    		<div class="div-block-5">
+    			<h3 class="heading-style-h3 spacer-top-2">
+    				WSPÓLNY BILET
+    			</h3>
+    			<p class="spacer-top-1">
+    				Proponujemy zintegrowany system taryfowy. Jedna karta obsługuje cały subregion. System sam obliczy najtańszą trasę, honorując Twoją Kartę Jastrzębianina czy Rybkę.
+    			</p>
+    		</div>
+
+            <div class="div-block-5">
+    			<h3 class="heading-style-h3 spacer-top-2">
+    				NOWE WĘZŁY 
+    			</h3>
+    			<p class="spacer-top-1">
+    				Koniec z dworcami-widmami. Żądamy nowoczesnych centr przesiadkowych, łączące autobusy miejskie, dalekobieżne, kolej i rower subregionalny.
+    			</p>
+    		</div>
+
+            <div class="div-block-5">
+    			<h3 class="heading-style-h3 spacer-top-2">
+    				OTWARTE DANE 
+    			</h3>
+    			<p class="spacer-top-1">
+    				Żądamy udostępnienia danych GPS na żywo. Chcemy widzieć każdy autobus w aplikacjach typu Google Maps czy zbiorkom.live. Pasażer ma prawo wiedzieć, gdzie naprawdę jest jego transport.
+    			</p>
+    		</div>
+    	</div>
+    </div>
+
+
+
+   
+</div>
+<br>
+<br>
+<br>
+    </main>
+    <script>
+const cityLineMapping = {
+    "Rybnik": ["S-1", "S-2"],
+    "Żory": ["S-1", "S-3", "S-4", "S-6"],
+    "Jastrzębie-Zdrój": ["S-2", "S-4", "S-5", "S-6", "S-7"],
+    "Wodzisław Śląski": ["S-2", "S-5"],
+    "Racibórz": ["S-1", "S-5"],
+    "Pszczyna": ["S-3", "S-7"],
+    "Czerwionka-Leszczyny": ["S-4"],
+    "Rydułtowy": ["S-1"],
+    "Knurów": ["S-2"],
+    "Pawłowice": ["S-6", "S-7"],
+    "Suszec": ["S-3"],
+    "Mszana": ["S-2", "S-5"],
+    "Radlin": ["S-2"],
+    "Lubomia": ["S-5"],
+    "Syrynia": ["S-5"],
+    "Kornowac": ["S-1"],
+    "Rzuchów": ["S-1"],
+    "Gostyń": ["S-6"],
+    "Orzesze": ["S-6"],
+    "Wilcza": ["S-2"],
+    "Ochojec": ["S-2"],
+    "Golejów": ["S-2"],
+    "Wielopole": ["S-2"],
+    "Bełk": ["S-4"],
+    "Stanowice": ["S-4"],
+    "Palowice": ["S-4"],
+    "Szczejkowice": ["S-4"],
+    "Warszowice": ["S-6"],
+    "Studzionka": ["S-7"],
+    "Mizerów": ["S-7"],
+    "Brzeźce": ["S-7"],
+    "Poręba": ["S-7"],
+    "Kobielice": ["S-3"],
+    "Radostowice": ["S-3"],
+    "Rudziczka": ["S-3"],
+    
+    "Pszów": ["Najbliższa obsługa: Wodzisław Śląski (S-2, S-5) lub Syrynia (S-5)"],
+    "Kuźnia Raciborska": ["Komunikacja lokalna do Raciborza -> S-1, S-5"],
+    "Gliwice": ["Przesiadka w Knurowie/Szczygłowicach na S-2"],
+};
+
+const lineDetails = {
+    "S-1": "<a href='./ekspresowki.html#S-1'><b>S-1: Racibórz - Rybnik - Żory.</b></a>",
+    "S-2": "<a href='./ekspresowki.html#S-2'><b>S-2: Jastrzębie - Wodzisław - Rybnik - Knurów.</b> </a>",
+    "S-3": "<a href='./ekspresowki.html#S-3'><b>S-3: Pszczyna - Suszec - Żory.</b> </a>",
+    "S-4": "<a href='./ekspresowki.html#S-4'><b>S-4: Jastrzębie - Żory - Czerwionka.</b> </a>",
+    "S-5": "<a href='./ekspresowki.html#S-5'><b>S-5: Jastrzębie - Wodzisław - Lubomia - Racibórz.</b> </a>",
+    "S-6": "<a href='./ekspresowki.html#S-6'><b>S-6: Jastrzębie - Pawłowice - Żory - Gostyń.</b> </a>",
+    "S-7": "<a href='./ekspresowki.html#S-7'><b>S-7: Pszczyna - Pawłowice - Jastrzębie.</b> </a>"
+};
+
+function autocomplete(inp, arr) {
+    var currentFocus;
+    inp.addEventListener("input", function(e) {
+        var a, b, i, val = this.value;
+        closeAllLists();
+        if (!val) { return false; }
+        currentFocus = -1;
+        a = document.createElement("DIV");
+        a.setAttribute("id", this.id + "autocomplete-list");
+        a.setAttribute("class", "autocomplete-items");
+        this.parentNode.appendChild(a);
+        for (i = 0; i < arr.length; i++) {
+            if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                b = document.createElement("DIV");
+                b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                b.innerHTML += arr[i].substr(val.length);
+                b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                b.addEventListener("click", function(e) {
+                    inp.value = this.getElementsByTagName("input")[0].value;
+                    showResult(inp.value);
+                    closeAllLists();
+                });
+                a.appendChild(b);
+            }
+        }
+    });
+
+    inp.form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        showResult(inp.value);
+    });
+
+    function showResult(cityName) {
+        const resultDiv = document.getElementById("result-container");
+        const lines = cityLineMapping[cityName];
+
+        if (lines) {
+            let html = `<div class="card-result animate-in">
+                            <h3>Komunikacja dla: ${cityName}</h3>
+                            <p>Przez Twoją miejscowość (lub w jej najbliższej okolicy) przebiegają linie:</p>
+                            <ul>`;
+            lines.forEach(line => {
+                const shortLineName = line.split(" ")[0]; 
+                const detail = lineDetails[shortLineName] || line;
+                html += `<li>${detail}</li>`;
+            });
+            resultDiv.innerHTML = html;
+        } else if(cityName === "") {
+             resultDiv.innerHTML = "";
+        } else {
+            resultDiv.innerHTML = `<div class="card-result error">Nie znaleźliśmy Twojej miejscowości na mapie głównych linii ekspresowych. Prawdopodobnie Twoją okolicę obsłuży komunikacja uzupełniająca (dowozowa).</div>`;
+        }
+    }
+
+    inp.addEventListener("keydown", function(e) {
+        var x = document.getElementById(this.id + "autocomplete-list");
+        if (x) x = x.getElementsByTagName("div");
+        if (e.keyCode == 40) {
+            currentFocus++;
+            addActive(x);
+        } else if (e.keyCode == 38) {
+            currentFocus--;
+            addActive(x);
+        } else if (e.keyCode == 13) {
+            e.preventDefault();
+            if (currentFocus > -1) {
+                if (x) x[currentFocus].click();
+            }
+        }
+    });
+
+    function addActive(x) {
+        if (!x) return false;
+        removeActive(x);
+        if (currentFocus >= x.length) currentFocus = 0;
+        if (currentFocus < 0) currentFocus = (x.length - 1);
+        x[currentFocus].classList.add("autocomplete-active");
+    }
+
+    function removeActive(x) {
+        for (var i = 0; i < x.length; i++) {
+            x[i].classList.remove("autocomplete-active");
+        }
+    }
+
+    function closeAllLists(elmnt) {
+        var x = document.getElementsByClassName("autocomplete-items");
+        for (var i = 0; i < x.length; i++) {
+            if (elmnt != x[i] && elmnt != inp) {
+                x[i].parentNode.removeChild(x[i]);
+            }
+        }
+    }
+
+    document.addEventListener("click", function(e) {
+        closeAllLists(e.target);
+    });
+}
+
+var listCities = Object.keys(cityLineMapping).sort();
+autocomplete(document.getElementById("myInput"), listCities);
+</script>
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.classList.contains("responsive")) {
+        x.classList.remove("responsive");
+    } else {
+        x.classList.add("responsive");
+    }
+}
+
+</script>
+</body>
+</html>
