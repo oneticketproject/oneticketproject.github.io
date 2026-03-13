@@ -228,3 +228,127 @@ input[type=text] {
  padding-top: 0;
  padding-right: 0
 }
+
+
+.topnav {
+ background-color: #161616;
+ overflow: hidden;
+ position: relative;
+ min-height: 60px
+}
+
+.topnav ul {
+ display: flex;
+ list-style-type: none;
+ margin: 0;
+ padding: 0
+}
+
+.topnav .icon {
+ display: none
+}
+
+
+
+
+
+
+html, body {
+ overflow-x: hidden;
+ width: 100%;
+ position: relative
+}
+
+body{
+ text-decoration: none
+}
+
+@media screen and (max-width: 800px) {
+    
+    
+    .heroprzystanki {
+        flex-direction: column; 
+        gap: 40px;
+    }
+
+    .div-lewoprzystanki, .div-prawoprzystanki {
+        width: 100%;
+    }
+
+    
+    .div-niewiem strong:first-child {
+        font-size: 1.5rem;
+    }
+
+    .div-lewoprzystanki strong, .div-prawoprzystanki strong {
+        font-size: 1.2rem;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    
+    .topnav ul {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .topnav.responsive ul {
+        display: flex; 
+    }
+
+    .topnav .icon {
+        display: block; 
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+
+    
+    .topnav:not(.responsive) ul li:not(:first-child) {
+        display: none;
+    }
+
+    
+    .div-block {
+        width: 90% !important;
+        margin: 0 auto;
+        padding: 20px !important;
+    }
+
+    .div-block h1 {
+        font-size: 1.8rem !important;
+    }
+
+    
+    .hero-home a {
+        display: inline-block;
+        width: 45%; 
+    }
+    
+    .button1 {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    
+    #myBtn {
+        width: auto !important;
+        padding: 10px 20px !important;
+        font-size: 14px !important;
+        right: 15px !important;
+        bottom: 15px !important;
+        white-space: nowrap;
+    }
+
+    
+    .schematkontener img {
+        width: 100% !important;
+    }
+}
+
+
+.timetable-route-point.name {
+    font-size: 14px; 
+    line-height: 1.1;
+}
