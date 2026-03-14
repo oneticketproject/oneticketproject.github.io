@@ -383,3 +383,8 @@ visibility: visible;
     justify-content: center; 
     gap:10px;
 }
+
+#share-fallback{
+ margin-top: -2%;
+ margin-bottom: -2%;
+}
