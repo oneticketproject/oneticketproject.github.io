@@ -350,12 +350,13 @@ function copyAndVisualChange(text) {
 
         // 2. Podmień na informację o sukcesie
         shareText.innerText = "Skopiowano do schowka!";
-        shareBtn.style.backgroundColor = "#2f850a"; // Opcjonalnie zmień na chwilę kolor na zielony
+        shareBtn.style.backgroundColor = "#2f850a"; 
 
         // 3. Po 2 sekundach wróć do normy
         setTimeout(() => {
             shareText.innerText = originalText;
             shareIcon.innerText = originalIcon;
+			shareBtn.style.backgroundColor = ""; 
         }, 2000);
     });
 }
