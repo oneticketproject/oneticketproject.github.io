@@ -352,3 +352,29 @@ body{
     font-size: 14px; 
     line-height: 1.1;
 }
+#toast {
+   white-space: nowrap; 
+
+
+border-radius: 8px;
+font-weight: bold;
+z-index: 9999;
+transition: opacity 0.5s, visibility 0.5s;
+}
+
+.toast-hidden {
+opacity: 0;
+visibility: hidden;
+}
+
+.toast-visible {
+opacity: 1;
+visibility: visible;
+}
+
+.share-box {
+    display: flex;       /* Układa elementy obok siebie */
+    align-items: center; /* Centruje przycisk i napis w pionie */
+    gap: 15px;          /* Dodaje odstęp między przyciskiem a napisem */
+    margin-top: 10px;    /* Odstęp od przycisków powyżej */
+}
