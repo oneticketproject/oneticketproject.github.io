@@ -70,9 +70,9 @@ body {
                         <a href="./Koncepcja poprawy transportu publicznego w Subregionie Zachodnim Województwa Śląskiego.pdf"><button class="button1">Sprawdź nasz dokument </button></a>
 <div class="share-box">
     <button id="shareButton" class="btn-share">
-        <i class="material-icons" style="font-size:22px;">share</i> Udostępnij projekt znajomym
+        <i class="material-icons" id="shareIcon" style="font-size:22px;">share</i> 
+        <span id="shareText">Udostępnij projekt znajomym</span>
     </button>
-    <p id="share-fallback" class="toast-hidden">Skopiuj link: <span>https://oneticketproject.github.io/</span></p>
 </div>
 
             </div>
@@ -318,10 +318,11 @@ function myFunction() {
 
 </script>
 	<script>
-		const btn = document.getElementById('shareButton');
-const toast = document.getElementById('toast');
+const shareBtn = document.getElementById('shareButton');
+const shareText = document.getElementById('shareText');
+const shareIcon = document.getElementById('shareIcon');
 
-btn.addEventListener('click', async () => {
+shareBtn.addEventListener('click', async () => {
     const shareData = {
         title: 'One Ticket Project',
         text: 'Projekt 1 Bilet dla 700 000 ludzi. Podpisz petycję o nowe linie ekspresowe i więcej!',
@@ -329,21 +330,33 @@ btn.addEventListener('click', async () => {
     };
 
     try {
-        // Logika dla iPhone (Safari) i Android (Chrome)
         if (navigator.share) {
             await navigator.share(shareData);
         } else {
             throw new Error('Web Share not supported');
         }
     } catch (err) {
-        copyToClipboard(shareData.url);
+        // Jeśli nie można udostępnić (np. komputer), kopiujemy i zmieniamy przycisk
+        copyAndVisualChange(shareData.url);
     }
 });
 
-function copyToClipboard(text) {
+function copyAndVisualChange(text) {
+    // Kopiowanie do schowka
     navigator.clipboard.writeText(text).then(() => {
-        toast.className = "toast-visible";
-        setTimeout(() => { toast.className = "toast-hidden"; }, 3000);
+        // 1. Zapamiętaj stare stany
+        const originalText = shareText.innerText;
+        const originalIcon = shareIcon.innerText;
+
+        // 2. Podmień na informację o sukcesie
+        shareText.innerText = "Skopiowano do schowka!";
+        shareBtn.style.backgroundColor = "#2f850a"; // Opcjonalnie zmień na chwilę kolor na zielony
+
+        // 3. Po 2 sekundach wróć do normy
+        setTimeout(() => {
+            shareText.innerText = originalText;
+            shareIcon.innerText = originalIcon;
+        }, 2000);
     });
 }
 	</script>
