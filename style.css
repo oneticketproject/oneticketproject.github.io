@@ -345,6 +345,10 @@ body{
     .schematkontener img {
         width: 100% !important;
     }
+
+    #shareButton{
+     width:100% !important;
+    }
 }
 
 
