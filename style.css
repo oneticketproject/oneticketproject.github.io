@@ -373,8 +373,15 @@ visibility: visible;
 }
 
 .share-box {
-    display: flex;       /* Układa elementy obok siebie */
-    align-items: center; /* Centruje przycisk i napis w pionie */
-    gap: 15px;          /* Dodaje odstęp między przyciskiem a napisem */
-    margin-top: 10px;    /* Odstęp od przycisków powyżej */
+    display: flex;     
+    align-items: center; 
+    gap: 15px;         
+    margin-top: 10px;
+}
+
+.btn-share {
+    display: inline-flex;    
+    align-items: center;     
+    justify-content: center; 
+    gap:10px;
 }
