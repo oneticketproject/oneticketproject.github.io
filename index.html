@@ -67,7 +67,12 @@ body {
            
             <a href="https://www.petycjeonline.com/jeden_bilet_spojna_sie_chcemy_nowoczesnego_transportu_w_subregionie_zachodnim"><button class="button1">Podpisz Petycję</button></a>
                         <a href="./Koncepcja poprawy transportu publicznego w Subregionie Zachodnim Województwa Śląskiego.pdf"><button class="button1">Sprawdź nasz dokument </button></a>
-
+<div class="share-box">
+    <button id="shareButton" class="btn-tiger-share">
+        <span class="icon">📢</span> Udostępnij projekt
+    </button>
+    <div id="toast" class="toast-hidden">Skopiowano link do schowka!</div>
+</div>
 
             </div>
         </div>
@@ -311,5 +316,35 @@ function myFunction() {
 }
 
 </script>
+	<script>
+		const btn = document.getElementById('shareButton');
+const toast = document.getElementById('toast');
+
+btn.addEventListener('click', async () => {
+    const shareData = {
+        title: 'One Ticket Project',
+        text: 'Projekt 1 Bilet dla 700 000 ludzi. Podpisz petycję o nowe linie ekspresowe i więcej!',
+        url: 'https://oneticketproject.github.io/'
+    };
+
+    try {
+        // Logika dla iPhone (Safari) i Android (Chrome)
+        if (navigator.share) {
+            await navigator.share(shareData);
+        } else {
+            throw new Error('Web Share not supported');
+        }
+    } catch (err) {
+        copyToClipboard(shareData.url);
+    }
+});
+
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        toast.className = "toast-visible";
+        setTimeout(() => { toast.className = "toast-hidden"; }, 3000);
+    });
+}
+	</script>
 </body>
 </html>
