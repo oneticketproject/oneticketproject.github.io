@@ -372,8 +372,7 @@ opacity: 1;
 visibility: visible;
 }
 
-.share-box {
-    display: flex;     
+.share-box {  
     align-items: center; 
     gap: 15px;         
 }
