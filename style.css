@@ -64,12 +64,15 @@ nav .icon {
  min-height: 40vh;
  padding: 5%;
  background-image: url("./hisu-lee-V4Pn7QeYdPQ-unsplash.jpg");
+ background-attachment: fixed;
  background-size: cover;
  background-repeat: no-repeat
 }
 
 .div-block {
- width: 60%;
+                position: relative; 
+
+ width: 40%;
  padding-left: 3%;
  background-color: #cecae5;
  padding-bottom: 3%;
@@ -97,7 +100,11 @@ div.div-block-5:nth-child(1){
  font-family: 'Roboto', sans-serif;
  color: #000000;
  font-size: 2.5rem;
- margin-bottom: 20px
+ margin-bottom: 20px;
+     /* TO JEST KLUCZ: */
+    display: block;
+    min-height: 2.5em;   /* Rezerwuje miejsce na ok. 3 linie tekstu */
+    line-height: 1.2;  /* Ustawia stały odstęp między liniami */
 }
 
 
@@ -250,8 +257,40 @@ input[type=text] {
 
 
 
+.bus-naklejka {
+    position: absolute;   /* Wyciąga obrazek z normalnego układu tekstu */
+    top: -25%;           /* Przesuwa w górę (minusowe wartości wychodzą poza ramkę) */
+    right: -15%;         /* Przesuwa w prawo (minusowe wartości wychodzą poza ramkę) */
+    width: 200px;         /* Dopasuj rozmiar do własnych potrzeb */
+    z-index: 10;          /* Upewnia się, że autobus jest nad tekstem/tłem */
+    pointer-events: none; /* (Opcjonalnie) Sprawia, że autobus nie przeszkadza w klikaniu przycisków pod nim */
+    rotate: 15deg;
+}
 
+.bus-naklejka2 {
+    position: absolute;   /* Wyciąga obrazek z normalnego układu tekstu */
+    bottom: -18%;           /* Przesuwa w górę (minusowe wartości wychodzą poza ramkę) */
+    left: -10%;         /* Przesuwa w prawo (minusowe wartości wychodzą poza ramkę) */
+    width: 150px;         /* Dopasuj rozmiar do własnych potrzeb */
+    z-index: 10;          /* Upewnia się, że autobus jest nad tekstem/tłem */
+    pointer-events: none; /* (Opcjonalnie) Sprawia, że autobus nie przeszkadza w klikaniu przycisków pod nim */
+    rotate: 15deg;
+}
 
+.tekstIkona{
+    height: 1.7em;
+    justify-content: center;
+    vertical-align: middle; 
+}
+
+.tekstLogo{
+    height: 1.4em;
+    justify-content: center;
+    vertical-align: middle; 
+    border-radius: 5px;
+    background-color: white;
+    text-shadow: 2px 2px #000;
+}
 
 html, body {
  overflow-x: hidden;
@@ -391,4 +430,8 @@ visibility: visible;
 #share-fallback{
  margin-top: -2%;
  margin-bottom: -2%;
+}
+
+.js-marquee span{
+    padding: 20px;
 }
