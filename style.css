@@ -259,7 +259,7 @@ input[type=text] {
 
 .bus-naklejka {
     position: absolute;   /* Wyciąga obrazek z normalnego układu tekstu */
-    top: -25%;           /* Przesuwa w górę (minusowe wartości wychodzą poza ramkę) */
+    top: -18%;           /* Przesuwa w górę (minusowe wartości wychodzą poza ramkę) */
     right: -15%;         /* Przesuwa w prawo (minusowe wartości wychodzą poza ramkę) */
     width: 200px;         /* Dopasuj rozmiar do własnych potrzeb */
     z-index: 10;          /* Upewnia się, że autobus jest nad tekstem/tłem */
