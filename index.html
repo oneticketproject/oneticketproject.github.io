@@ -56,15 +56,53 @@ body {
     </a>
 </nav>
 
+
+
+<!-- 
+<div style="width: 100000px; margin-left: 10px; animation: 29.0839s linear infinite marqueeAnimation-54447610;" class="js-marquee-wrapper"><div class="js-marquee" style="margin-right: 50px; float: left;">
+	<span>
+	Dlaczego 700 000 osób wciąż musi walczyć z komunikacją każdego dnia? Ty też masz tego dość? Podpisz petycję o jeden system.
+	</span>
+	<span>
+Dlaczego 700 000 osób wciąż musi walczyć z komunikacją każdego dnia? Ty też masz tego dość? Podpisz petycję o jeden system.	</span>
+	<span>
+Dlaczego 700 000 osób wciąż musi walczyć z komunikacją każdego dnia? Ty też masz tego dość? Podpisz petycję o jeden system.	</span>
+	<span>
+Dlaczego 700 000 osób wciąż musi walczyć z komunikacją każdego dnia? Ty też masz tego dość? Podpisz petycję o jeden system.	</span>
+	<span>
+Dlaczego 700 000 osób wciąż musi walczyć z komunikacją każdego dnia? Ty też masz tego dość? Podpisz petycję o jeden system.	</span>
+	<span>
+Dlaczego 700 000 osób wciąż musi walczyć z komunikacją każdego dnia? Ty też masz tego dość? Podpisz petycję o jeden system.	</span>
+</div><div class="js-marquee" style="margin-right: 50px; float: left;">
+	<span>
+Dlaczego 700 000 osób wciąż musi walczyć z komunikacją każdego dnia? Ty też masz tego dość? Podpisz petycję o jeden system.	</span>
+	<span>
+Dlaczego 700 000 osób wciąż musi walczyć z komunikacją każdego dnia? Ty też masz tego dość? Podpisz petycję o jeden system.	</span>
+	<span>
+Dlaczego 700 000 osób wciąż musi walczyć z komunikacją każdego dnia? Ty też masz tego dość? Podpisz petycję o jeden system.	</span>
+	<span>
+Dlaczego 700 000 osób wciąż musi walczyć z komunikacją każdego dnia? Ty też masz tego dość? Podpisz petycję o jeden system.	</span>
+	<span>
+Dlaczego 700 000 osób wciąż musi walczyć z komunikacją każdego dnia? Ty też masz tego dość? Podpisz petycję o jeden system.	</span>
+	<span>
+Dlaczego 700 000 osób wciąż musi walczyć z komunikacją każdego dnia? Ty też masz tego dość? Podpisz petycję o jeden system.	</span>
+</div><style>@-webkit-keyframes marqueeAnimation-54447610  { 100%  {margin-left:-2729px}}</style></div>
+ -->
+
+
+
+
+
     <main>
         <section class="hero-home">
+            
             <div class="div-block">
-                
-                <h1>700 000 pasażerów. <br>
-                    8 operatorów.<br>Czas na JEDEN SYSTEM.
-                </h1>
+                <img src="autobusMan.png" class="bus-naklejka">        
+                <img src="autobusMaz.png" class="bus-naklejka2">                
+        
+                <h1>Chcemy <span id="typed-text"></span><span class="cursor">|</span></h1>
 
-                <p>Subregion Zachodni to potęga demograficzna, która stoi w korku przez brak współpracy między miastami. Nasza koncepcja to koniec ery "osobnych wysp" Rybnika, Jastrzębia i Wodzisławia.</p>
+                <p>Wyobraź sobie <b>jeden</b> bilet, <b>jedną</b> aplikację i <b>jedne</b> malowanie. Kończymy z absurdem braku współpracy między miastami. Podpisz petycję o spójny transport dla regionu.</p>
            
             <a href="https://www.petycjeonline.com/jeden_bilet_spojna_sie_chcemy_nowoczesnego_transportu_w_subregionie_zachodnim"><button class="button1">Podpisz Petycję</button></a>
                         <a href="./Koncepcja poprawy transportu publicznego w Subregionie Zachodnim Województwa Śląskiego.pdf"><button class="button1">Sprawdź nasz dokument </button></a>
@@ -119,7 +157,7 @@ body {
     				WSPÓLNY BILET
     			</h3>
     			<p class="spacer-top-1">
-    				Proponujemy zintegrowany system taryfowy. Jedna karta obsługuje cały subregion. System sam obliczy najtańszą trasę, honorując Twoją Kartę Jastrzębianina czy Rybkę.
+    				Proponujemy zintegrowany system taryfowy. Jedna karta obsługuje cały subregion. System sam obliczy najtańszą trasę, honorując Twoją Kartę Jastrzębianina <img src="KartaJastrzebianina.png" class="tekstIkona">  czy Rybkę <img src="karta_rybka_mini.webp" class="tekstIkona">.
     			</p>
     		</div>
 
@@ -137,7 +175,7 @@ body {
     				OTWARTE DANE 
     			</h3>
     			<p class="spacer-top-1">
-    				Żądamy udostępnienia danych GPS na żywo. Chcemy widzieć każdy autobus w aplikacjach typu Google Maps czy zbiorkom.live. Pasażer ma prawo wiedzieć, gdzie naprawdę jest jego transport.
+    				Żądamy udostępnienia danych GPS na żywo. Chcemy widzieć każdy autobus w aplikacjach typu <img src="GoogleMapsLogo.png" class="tekstLogo"> Google Maps czy</p><p><img src="zbiorkomlogo.png" class="tekstLogo"> zbiorkom.live. Pasażer ma prawo wiedzieć, gdzie naprawdę jest jego transport.
     			</p>
     		</div>
     	</div>
@@ -336,23 +374,18 @@ shareBtn.addEventListener('click', async () => {
             throw new Error('Web Share not supported');
         }
     } catch (err) {
-        // Jeśli nie można udostępnić (np. komputer), kopiujemy i zmieniamy przycisk
         copyAndVisualChange(shareData.url);
     }
 });
 
 function copyAndVisualChange(text) {
-    // Kopiowanie do schowka
     navigator.clipboard.writeText(text).then(() => {
-        // 1. Zapamiętaj stare stany
         const originalText = shareText.innerText;
         const originalIcon = shareIcon.innerText;
 
-        // 2. Podmień na informację o sukcesie
         shareText.innerText = "Skopiowano do schowka!";
         shareBtn.style.backgroundColor = "#2f850a"; 
 
-        // 3. Po 2 sekundach wróć do normy
         setTimeout(() => {
             shareText.innerText = originalText;
             shareIcon.innerText = originalIcon;
@@ -361,5 +394,50 @@ function copyAndVisualChange(text) {
     });
 }
 	</script>
+    <script>
+        const textElement = document.getElementById("typed-text");
+const phrases = [
+    "autobusów ekspresowych.", 
+    "końca 8 różnych biletów.",    
+    "podglądu GPS na żywo.",                
+    "płacenia za trasę, a nie za korki.",           
+    "nocnej komunikacji.",     
+    "velostrad łączących nasze miasta.",    
+    "spójnych nazw przystanków.",           
+    "punktualności bez wymówek.",        
+];
+
+let phraseIndex = 0;
+let characterIndex = 0;
+let isDeleting = false;
+let typeSpeed = 100; 
+
+function typeEffect() {
+    const currentPhrase = phrases[phraseIndex];
+    
+    if (isDeleting) {
+        textElement.textContent = currentPhrase.substring(0, characterIndex - 1);
+        characterIndex--;
+        typeSpeed = 25; 
+    } else {
+        textElement.textContent = currentPhrase.substring(0, characterIndex + 1);
+        characterIndex++;
+        typeSpeed = 30; 
+    }
+
+    if (!isDeleting && characterIndex === currentPhrase.length) {
+        isDeleting = true;
+        typeSpeed = 1500; 
+    } else if (isDeleting && characterIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        typeSpeed = 500;
+    }
+
+    setTimeout(typeEffect, typeSpeed);
+}
+
+document.addEventListener("DOMContentLoaded", typeEffect);
+    </script>
 </body>
 </html>
